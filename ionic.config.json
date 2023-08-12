@@ -1,0 +1,7 @@
+{
+  "name": "components-homework",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
