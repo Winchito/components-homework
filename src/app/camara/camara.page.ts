@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 
 @Component({
@@ -6,12 +6,9 @@ import { PhotoService } from '../services/photo.service';
   templateUrl: './camara.page.html',
   styleUrls: ['./camara.page.scss'],
 })
-export class CamaraPage implements OnInit {
+export class CamaraPage {
 
   constructor(public photoService: PhotoService) { }
-
-  ngOnInit() {
-  }
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
