@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Toggles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="prueba2">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Toggles</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+<!-- Toggle Funcional -->
+<div class="container">
+  <ion-toggle (click)="toggleCereza()" name="myToggle" id="btnCereza" disabled={{buttonDisabledCereza}} color="success">Color Cereza</ion-toggle>
+    <br><br><br>
+  <ion-toggle (click)="toggleLimon()" name="myToggle" id="btnLimon" disabled={{buttonDisabledLimon}} color="danger">Color Limón</ion-toggle>
+    <br><br><br>
+  <ion-toggle (click)="toggleNaranja()" name="myToggle" id="btnNaranja" disabled={{buttonDisabledNaranja}} color="warning">Color Naranja</ion-toggle>
+</div>
+<!--trigger="btnCereza"-->
+<ion-alert
+  [isOpen]="accionAlertaAbiertaCereza"
+  subHeader="Atención!"
+  message= " Activando Color Cereza!"
+  (didDismiss)="cerrarAlerta()"
+  [buttons]="alertButtons"
+></ion-alert>
+<ion-alert
+  [isOpen]="accionAlertaAbiertaLimon"
+  subHeader="Atención"
+  message="Activando Color Limón!"
+  [buttons]="alertButtons"
+  (didDismiss)="cerrarAlerta()"
+></ion-alert>
+<ion-alert
+  [isOpen]="accionAlertaAbiertaNaranja" 
+  subHeader="Atención"
+  message="Activando Color Naranja!"
+  [buttons]="alertButtons"
+  (didDismiss)="cerrarAlerta()"
+></ion-alert>
+</ion-content>
