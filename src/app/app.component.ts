@@ -12,5 +12,15 @@ export class AppComponent {
     { title: 'Camara', url: '/camara', icon: 'camera' },
     { title: 'Segmentos', url: '/segmento', icon: 'list' },
   ];
+
+  titleName = this.appPages.map(page => page.title)
+
+  public results = [...this.titleName];
+
+  handleInput(event:any) {
+    const query = event.target.value.toLowerCase();
+    this.results = this.titleName.filter((d) => d.toLowerCase().indexOf(query) > -1);
+  }
+
   constructor() {}
 }

@@ -5,7 +5,11 @@
         <ion-list id="inbox-list">
           <ion-list-header>Inicio</ion-list-header>
           <ion-note>Usuario Test</ion-note>
-          <ion-searchbar placeholder="Buscar"></ion-searchbar>
+          <ion-searchbar show-clear-button="focus" placeholder="Buscar" (ionInput)="handleInput($event)"></ion-searchbar>
+          <br>  
+          <ion-note *ngFor="let result of results">
+            <ion-label>{{ result }}</ion-label>
+          </ion-note>
           <br>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
