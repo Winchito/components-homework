@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'segmento',
     loadChildren: () => import('./segmento/segmento.module').then( m => m.SegmentoPageModule)
+  },  {
+    path: 'calendario',
+    loadChildren: () => import('./calendario/calendario.module').then( m => m.CalendarioPageModule)
   },
+
 ];
 
 @NgModule({

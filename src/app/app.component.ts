@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'Condiciones', url: '/alerta', icon: 'alert' },
     { title: 'Camara', url: '/camara', icon: 'camera' },
     { title: 'Segmentos', url: '/segmento', icon: 'list' },
+    { title: 'Calendario', url: '/calendario', icon: 'calendar' },
   ];
 
   titleName = this.appPages.map(page => page.title)
